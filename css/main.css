@@ -1,0 +1,168 @@
+@font-face {
+    font-family: CircularBook;
+    src: url("../fonts/CircularStd-Book.otf") format("opentype");
+}
+
+@font-face {
+    font-family: CircularBold;
+    src: url("../fonts/CircularStd-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family:'FontAwesome';
+    src:url('../fonts/fontawesome-webfont.eot?v=4.4.0');
+    src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+    font-weight:normal;
+    font-style:normal
+}
+
+html, body {
+    margin: 0;
+    font-family: CircularBook !important;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+#logo {
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.slide1 {
+    min-height: 400px;
+    text-align: center;
+    background-color: rgb(246, 245, 244);
+    opacity: 1;
+    width: 100%;
+}
+
+.slide2, .slide3 {
+    text-align: left;
+    width: 100%;
+}
+
+.slide2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.title {
+    color: #ff5a57;
+    margin: 0;
+    padding: 0;
+}
+
+.submit-button {
+    background-color: #95C959 !important;
+    color: white !important;
+}
+
+#other {
+    display: none;
+}
+
+
+/*** FOOTER ***/
+
+.bg-dark-grey {
+    background: #2D2D2D;
+}
+
+.padding-20px {
+    padding: 20px;
+}
+
+.footer-header {
+    text-align: center;
+    font-size: 13px !important;
+}
+
+.footer-header span {
+    display: inline-block;
+}
+
+.light-red {
+    color: #FF5A57;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.bold {
+    font-family: "CircularBold";
+}
+
+.grey {
+    color: #B4B1AD;
+}
+.margin-right-10px {
+    margin-right: 10px;
+}
+.margin-left-10px {
+    margin-left: 10px;
+}
+
+.text {
+    /*color: #B4B1AD !important;*/
+}
+
+
+/** linkedin **/
+
+
+.fa-linkedin-square::before {
+    content: "\f08c";
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.linkedin {
+    text-decoration: none !important;
+}
+
+i {
+    color: inherit;
+}
+
+a:hover, a:hover > * {
+    color: #FF5A57;
+}
+
+
+.error ul li {
+    list-style-type: square;
+    color: #ff5a57;
+}
+
+
+.error-field {
+    border: 1px solid #ff5a57 !important;
+}
+
+/**** CODE ***/
+
+code {
+    margin: 5px;
+}
+
+
+@media screen and (max-width: 500px) {
+
+    span {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .fa-linkedin-square {
+        font-size: 20pt !important;
+    }
+}
