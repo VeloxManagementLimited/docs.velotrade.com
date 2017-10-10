@@ -353,7 +353,7 @@
 <code class="java">
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
-    import com.velotrade.sdk.entity.DebtorContact;
+    import com.velotrade.sdk.entity.*;
 
     public static void main(String[] args) throws Exception {
 
@@ -381,8 +381,7 @@
     <code class="java">
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
-    import com.velotrade.sdk.entity.Debtor;
-    import com.velotrade.sdk.entity.DebtorContact;
+    import com.velotrade.sdk.entity.*;
 
     public static void main(String[] args) throws Exception {
 
@@ -414,7 +413,7 @@
     <code class="java">
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
-    import com.velotrade.sdk.entity.Attachment;
+    import com.velotrade.sdk.entity.*;
 
     public static void main(String[] args) throws Exception {
 
@@ -440,12 +439,7 @@
     <code class="java">
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
-    import com.velotrade.sdk.entity.Invoice;
-    import com.velotrade.sdk.entity.Debtor;
-    import com.velotrade.sdk.entity.Auction;
-    import com.velotrade.sdk.entity.Attachment;
-    import com.velotrade.sdk.entity.Debtor;
-    import com.velotrade.sdk.entity.DebtorContact;
+    import com.velotrade.sdk.entity.*;
 
     public static void main(String[] args) throws Exception {
 
