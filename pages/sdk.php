@@ -31,7 +31,7 @@
 <!-- Download -->
 <h4>Download</h4>
 <p>
-    You can download the latest version of our Java SDK <a href="/resources/api-sdk-java-latest.zip">here</a>.
+    You can download the latest version of our Java SDK <a href="/resources/velotrade-sdk-1.0.0.jar.zip">here</a>.
 </p>
 
 <!-- Entities -->
@@ -415,38 +415,38 @@
     import com.velotrade.sdk.entity.Debtor;
     import com.velotrade.sdk.entity.DebtorContact;
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
-        String issueDate = "2017-09-28T16:00:00.000Z";
-        String dueDate = "2017-11-27T16:00:00.000Z";
-        String expectedPaymentDate = "2017-11-27T16:00:00.000Z";
-        DateTimeFormatter parser = ISODateTimeFormat.dateTimeParser();
+        String baseUrl = "https://devapi.velotrade.com";
 
-        Date today = new Date();
-        String id = "oa1a6a170-d3d4-428a-835f-35ab021d410c";
+        String username = "robin.walser+sel1@me.com";
+        String password = "LBlN/DMcGA/NnI7WQot3qg==";
+
+        VelotradePublicAPI api = new VelotradePublicAPIImpl(baseUrl, username, password);
+
+        String debtorId = "oa1a6a170-d3d4-428a-835f-35ab021d410c";
+        DebtorContact debtorContact = api.getDebtorContact(debtorId);
+
         Invoice invoice = new Invoice();
-        invoice.setNumber("INVOICE123456");
-        invoice.setIssueDate(parser.parseDateTime(issueDate).toDate());
+
+        invoice.setNumber("INV000023456789");
         invoice.setCurrency("USD");
-        invoice.setAmount(10_000);
-        invoice.setExpectedAmount(10_000);
-        invoice.setPaymentTerms(60);
-        invoice.setDueDate(parser.parseDateTime(dueDate).toDate());
-        invoice.setExpectedPaymentDate(parser.parseDateTime(expectedPaymentDate).toDate());
+        invoice.setAmount(100_000);
+        invoice.setExpectedAmount(100_000);
+        invoice.setPaymentTerms(60); // days
+        invoice.setIssueDate(new SimpleDateFormat("dd/MM/yyyy").parse("10/10/2017"));
+        invoice.setDueDate(new SimpleDateFormat("dd/MM/yyyy").parse("11/12/2017"));
+        invoice.setExpectedPaymentDate(new SimpleDateFormat("dd/MM/yyyy").parse("11/12/2017"));
         invoice.setDescription("Description");
 
+        Attachment invoiceDocument       = api.uploadAttachment("file-path");;
+        Attachment transporationDocument = api.uploadAttachment("file-path");
+        Attachment purchaseOrderDocument = api.uploadAttachment("file-path");
 
-        String result = null;
-        try {
-            Attachment attachment = api.uploadAttachment("<file path>");
-            DebtorContact debtorContact = api.getDebtorContact(id);
-            Auction auction = new Auction(debtorContact, invoice, attachment, attachment, attachment);
+        Auction auction = new Auction(debtorContact, invoice, invoiceDocument,transporationDocument, purchaseOrderDocument);
+        String auctionId = api.createAuction(auction);
 
-            result = api.createAuction(auction);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        System.out.println(auctionId);
 
     }
     </code>
