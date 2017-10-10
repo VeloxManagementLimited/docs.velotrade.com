@@ -1,6 +1,39 @@
+<!-- Content -->
+
+<h5><a id="content"></a>Content</h5>
+<ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#download">Download</a></li>
+    <li><a href="#entities">Entities</a>
+    <ul>
+        <li><a href="#endebtor">Debtor</a></li>
+        <li><a href="#endebtorcontact">DebtorContact</a></li>
+        <li><a href="#enattachment">Attachment</a></li>
+        <li><a href="#eninvoice">Invoice</a></li>
+        <li><a href="#enauction">Auction</a></li>
+    </ul>
+    </li>
+    <li><a href="#debtorcontacts">Debtor Contacts</a>
+        <ul>
+            <li><a href="#getdebtorcontacts">Get all Debtor Contacts</a></li>
+            <li><a href="#getsingledebtorcontact">Get single Debtor Contact</a></li>
+        </ul>
+    </li>
+    <li><a href="#auction">Auction</a>
+        <ul>
+            <li><a href="#uploadattachment">Upload Attachment</a></li>
+            <li><a href="#createauction">Create Auction</a></li>
+            <li><a href="#auctionstatus">Get Auction Status</a></li>
+            <li><a href="#auctionphase">Get Auction Phase</a></li>
+            <li><a href="#approveauction">Approve Auction</a></li>
+            <li><a href="#rejectauction">Reject Auction</a></li>
+        </ul>
+    </li>
+</ul>
+
 
 <!-- Introduction -->
-<h4>Introduction</h4>
+<h4><a id="introduction"></a>Introduction</h4>
 <p>
     We provide our clients with a public API that allows to securely connect to our facilities and integrate Velotrade into your application.
     The following page contains information and code examples on how to make use of the Java SDK.
@@ -29,17 +62,17 @@
 </table>
 
 <!-- Download -->
-<h4>Download</h4>
+<h4><a id="download"></a>Download</h4>
 <p>
     You can download the latest version of our Java SDK <a href="/resources/velotrade-sdk-1.0.0.jar.zip">here</a>.
 </p>
 
 <!-- Entities -->
-<h4>Entities</h4>
+<h4><a id="entities"></a>Entities</h4>
 <p>
     The following section describes the entities used. We will only display the getters, but we have corresponding setters for all entities.
 </p>
-<h5>Debtor</h5>
+<h5><a id="endebtor"></a>Debtor</h5>
 <table class="u-full-width">
     <thead>
     <tr>
@@ -100,7 +133,7 @@
     </tr>
     </tbody>
 </table>
-<h5>DebotrContact</h5>
+<h5><a id="endebtorcontact"></a>DebotrContact</h5>
 <table class="u-full-width">
     <thead>
     <tr>
@@ -112,32 +145,32 @@
     <tbody>
     <tr>
         <td>getId()</td>
-        <td>Returns the id of the debtor contact.</td>
+        <td>Returns the id of the Debtor Contact.</td>
         <td>String</td>
     </tr>
     <tr>
         <td>getEmail()</td>
-        <td>Returns the email of the debtor contact.</td>
+        <td>Returns the email of the Debtor Contact.</td>
         <td>String</td>
     </tr>
     <tr>
         <td>getName()</td>
-        <td>Returns the name of the debtor contact.</td>
+        <td>Returns the name of the Debtor Contact.</td>
         <td>String</td>
     </tr>
     <tr>
         <td>getPhone()</td>
-        <td>Returns the phone number of the debtor contact.</td>
+        <td>Returns the phone number of the Debtor Contact.</td>
         <td>String</td>
     </tr>
     <tr>
         <td>getDebtor()</td>
-        <td>Returns the debtor object of the debtor contact.</td>
+        <td>Returns the debtor object of the Debtor Contact.</td>
         <td>Debtor</td>
     </tr>
     </tbody>
 </table>
-<h5>Attachment</h5>
+<h5><a id="enattachment"></a>Attachment</h5>
 <table class="u-full-width">
     <thead>
     <tr>
@@ -159,7 +192,7 @@
     </tr>
     </tbody>
 </table>
-<h5>Invoice</h5>
+<h5><a id="eninvoice"></a>Invoice</h5>
 <table class="u-full-width">
     <thead>
     <tr>
@@ -216,7 +249,7 @@
     </tr>
     </tbody>
 </table>
-<h5>Auction</h5>
+<h5><a id="enauction"></a>Auction</h5>
 <table class="u-full-width">
     <thead>
     <tr>
@@ -233,17 +266,17 @@
     </tr>
     <tr>
         <td>getDebtorName()</td>
-        <td>Returns the name of the debtor contact.</td>
+        <td>Returns the name of the Debtor Contact.</td>
         <td>String</td>
     </tr>
     <tr>
         <td>getDebtorEmail()</td>
-        <td>Returns the email of the debtor contact.</td>
+        <td>Returns the email of the Debtor Contact.</td>
         <td>String</td>
     </tr>
     <tr>
         <td>getDebtorPhone()</td>
-        <td>Returns the phone of the debtor contact.</td>
+        <td>Returns the phone of the Debtor Contact.</td>
         <td>String</td>
     </tr>
     <tr>
@@ -308,11 +341,13 @@
     </tr>
     </tbody>
 </table>
+
 <!-- Debtor Contacts -->
-<h4>Debtor Contacts</h4>
-<h5>Get all debtor contacts</h5>
+
+<h4><a id="debtorcontacts"></a>Debtor Contacts</h4>
+<h5><a id="getalldebtorcontacts"></a>Get all Debtor Contacts</h5>
 <p>
-    In order to retrieve all debtor contacts assigned to your account, you need to call the method getDebtorContacts().
+    In order to retrieve all Debtor Contacts assigned to your account, you need to call the method getDebtorContacts().
 </p>
 <pre>
 <code class="java">
@@ -338,9 +373,9 @@
 </code>
 </pre>
 
-<h5>Get single debtor contact</h5>
+<h5><a id="getsingledebtorcontact"></a>Get single Debtor Contact</h5>
 <p>
-    To retrieve a single debtor contact, you need to pass the debtor contact id to the getDebtorContact() method.
+    To retrieve a single Debtor Contact, you need to pass the Debtor Contact id to the getDebtorContact() method.
 </p>
 <pre>
     <code class="java">
@@ -367,13 +402,11 @@
     </code>
 </pre>
 
-
-
-
 <!-- Auction -->
-<h4>Auction</h4>
 
-<h5>Upload Attachment</h5>
+<h4><a id="auction"></a>Auction</h4>
+
+<h5><a id="uploadattachment"></a>Upload Attachment</h5>
 <p>
     Files can easily be uploaded using the uploadAttachment() method that takes the file path as parameter. An attachment object is returned when the upload is successful.
 </p>
@@ -381,8 +414,7 @@
     <code class="java">
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
-    import com.velotrade.sdk.entity.Debtor;
-    import com.velotrade.sdk.entity.DebtorContact;
+    import com.velotrade.sdk.entity.Attachment;
 
     public static void main(String[] args) throws Exception {
 
@@ -391,16 +423,14 @@
         String password = "password";
 
         VelotradePublicAPI api = new VelotradePublicAPIImpl(baseURL, username, password);
-
         Attachment attachment = api.uploadAttachment("file-path");
-
         System.out.println(attachment);
 
     }
     </code>
 </pre>
 
-<h5>Create Auction</h5>
+<h5><a id="createauction"></a>Create Auction</h5>
 <p>
     In order to create an auction, we need to retrieve the DebtorContact via the getDebtorContact() method,
     create an Invoice object, and create three attachments (Invoice Document, Transporation Document, Purchase Order).
@@ -410,6 +440,10 @@
     <code class="java">
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
+    import com.velotrade.sdk.entity.Invoice;
+    import com.velotrade.sdk.entity.Debtor;
+    import com.velotrade.sdk.entity.Auction;
+    import com.velotrade.sdk.entity.Attachment;
     import com.velotrade.sdk.entity.Debtor;
     import com.velotrade.sdk.entity.DebtorContact;
 
@@ -449,7 +483,7 @@
     </code>
 </pre>
 
-<h5>Get Auction Status</h5>
+<h5><a id="auctionstatus"></a>Get Auction Status</h5>
 <p>
     We can retrieve the auction status by invoking the method getAuctionStatus(auctionId).
     <br>
@@ -490,8 +524,6 @@
     <code class="java">
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
-    import com.velotrade.sdk.entity.Debtor;
-    import com.velotrade.sdk.entity.DebtorContact;
 
     public static void main(String[] args) throws Exception {
 
@@ -509,7 +541,7 @@
     </code>
 </pre>
 
-<h5>Get Auction Phase</h5>
+<h5><a id="auctionphase"></a>Get Auction Phase</h5>
 <p>
     We can retrieve the auction phase by invoking the method getAuctionPhase(auctionId).
     <br><br>
@@ -600,8 +632,6 @@
     <code class="java">
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
-    import com.velotrade.sdk.entity.Debtor;
-    import com.velotrade.sdk.entity.DebtorContact;
 
     public static void main(String[] args) throws Exception {
 
@@ -612,15 +642,15 @@
         VelotradePublicAPI api = new VelotradePublicAPIImpl(baseUrl, username, password);
 
         String auctionId = "te7f6f4d5-717d-4012-b52c-ad9755b3a4af";
-        String auctionStatus = api.getAuctionStatus(auctionId);
-        System.out.println(auctionStatus);
+        String auctionPhase = api.getAuctionPhase(auctionId);
+        System.out.println(auctionPhase);
 
     }
     </code>
 </pre>
 
 
-<h5>Approve Auction</h5>
+<h5><a id="approveauction"></a>Approve Auction</h5>
 <p>
     An auction that is in the phase SELLER_TO_APPROVE can be advanced to the next stage by approving the auction.
 </p>
@@ -628,8 +658,6 @@
     <code class="java">
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
-    import com.velotrade.sdk.entity.Debtor;
-    import com.velotrade.sdk.entity.DebtorContact;
 
     public static void main(String[] args) throws Exception {
 
@@ -647,7 +675,7 @@
     </code>
 </pre>
 
-<h5>Reject Auction</h5>
+<h5><a id="rejectauction"></a>Reject Auction</h5>
 <p>
     An auction that is in the phase SELLER_TO_APPROVE can be rejected.
 </p>
@@ -655,8 +683,6 @@
     <code class="java">
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
-    import com.velotrade.sdk.entity.Debtor;
-    import com.velotrade.sdk.entity.DebtorContact;
 
     public static void main(String[] args) throws Exception {
 
