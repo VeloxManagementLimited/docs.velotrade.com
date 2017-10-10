@@ -522,6 +522,7 @@
 <table>
     <thead>
     <tr>
+        <th>Phase</th>
         <th>Status</th>
         <th>Description</th>
     </tr>
@@ -529,38 +530,72 @@
     <tbody>
     <tr>
         <td>DETAILS_VERIFICATION</td>
+        <td>UNDER_REVIEW</td>
         <td>Auction is currently under review.</td>
     </tr>
     <tr>
         <td>MORE_DATA_NEEDED</td>
+        <td>UNDER_REVIEW</td>
         <td>Auction requires more details.</td>
     </tr>
     <tr>
         <td>SELLER_TO_APPROVE</td>
+        <td>UNDER_REVIEW</td>
         <td>Auction can be reviewed and approved by the seller.</td>
     </tr>
     <tr>
         <td>READY_TO_GO_LIVE</td>
+        <td>UNDER_REVIEW</td>
         <td>Auction is ready to go live.</td>
     </tr>
     <tr>
         <td>FIRST_ROUND_MANUAL_BUY</td>
+        <td>LIVE</td>
         <td>Auction is currently in the first round.</td>
     </tr>
     <tr>
+        <td>FIRST_ROUND_AUTOBUY</td>
+        <td>LIVE</td>
+        <td>Auction is currently in the first round auto buy.</td>
+    </tr>
+    <tr>
+        <td>FIRST_ROUND_BUYOUT</td>
+        <td>LIVE</td>
+        <td>Auction is currently in the first round buyout.</td>
+    </tr>
+    <tr>
+        <td>SECOND_ROUND_MANUAL_BUY</td>
+        <td>LIVE</td>
+        <td>Auction is currently in the second round.</td>
+    </tr>
+    <tr>
+        <td>SECOND_ROUND_AUTOBUY</td>
+        <td>LIVE</td>
+        <td>Auction is currently in the second round auto buy.</td>
+    </tr>
+    <tr>
+        <td>SECOND_ROUND_BUYOUT</td>
+        <td>LIVE</td>
+        <td>Auction is currently in the second round buyout.</td>
+    </tr>
+    <tr>
         <td>SUCCESSFUL</td>
+        <td>CLEARED</td>
         <td>Auction has successfully cleared.</td>
     </tr>
     <tr>
         <td>UNSUCCESSFUL</td>
+        <td>CLOSED</td>
         <td>Auction has unsuccessfully closed.</td>
     </tr>
     <tr>
         <td>REJECTED</td>
+        <td>CLOSED</td>
         <td>Auction has been rejected.</td>
     </tr>
     <tr>
         <td>REPAID</td>
+        <td>CLOSED</td>
         <td>Auction has been repaid.</td>
     </tr>
     </tbody>
