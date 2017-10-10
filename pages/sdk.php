@@ -516,9 +516,8 @@
 <h5>Get Auction Phase</h5>
 <p>
     We can retrieve the auction phase by invoking the method getAuctionPhase(auctionId).
-    <br>
-    The following statuses will be returned (String):
-
+    <br><br>
+    Below is an extract of the most important statuses returned as a string:
 </p>
 <table>
     <thead>
@@ -547,6 +546,22 @@
     <tr>
         <td>FIRST_ROUND_MANUAL_BUY</td>
         <td>Auction is currently in the first round.</td>
+    </tr>
+    <tr>
+        <td>SUCCESSFUL</td>
+        <td>Auction has successfully cleared.</td>
+    </tr>
+    <tr>
+        <td>UNSUCCESSFUL</td>
+        <td>Auction has unsuccessfully closed.</td>
+    </tr>
+    <tr>
+        <td>REJECTED</td>
+        <td>Auction has been rejected.</td>
+    </tr>
+    <tr>
+        <td>REPAID</td>
+        <td>Auction has been repaid.</td>
     </tr>
     </tbody>
 </table>
