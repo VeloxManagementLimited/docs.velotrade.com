@@ -15,7 +15,7 @@
     </li>
     <li><a href="#debtorcontacts">Debtor Contacts</a>
         <ul>
-            <li><a href="#getdebtorcontacts">Get all Debtor Contacts</a></li>
+            <li><a href="#getalldebtorcontacts">Get all Debtor Contacts</a></li>
             <li><a href="#getsingledebtorcontact">Get single Debtor Contact</a></li>
         </ul>
     </li>
