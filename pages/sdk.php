@@ -133,7 +133,7 @@
     </tr>
     </tbody>
 </table>
-<h5><a id="endebtorcontact"></a>DebotrContact</h5>
+<h5><a id="endebtorcontact"></a>DebtorContact</h5>
 <table class="u-full-width">
     <thead>
     <tr>
