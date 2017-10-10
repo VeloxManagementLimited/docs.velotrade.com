@@ -3,7 +3,7 @@
 <h4>Introduction</h4>
 <p>
     We provide our clients with a public API that allows to securely connect to our facilities and integrate Velotrade into your application.
-    The following page contains information and code examples on how to make use of the Java SDK provided by Velotrade.
+    The following page contains information and code examples on how to make use of the Java SDK.
     <br><br>
     <b>Please note that all interactions with our environments are monitored and protected by application firewalls. If you encounter any difficulties, please do not hesitate to contact us.</b><br><br>
 
@@ -312,8 +312,7 @@
 <h4>Debtor Contacts</h4>
 <h5>Get all debtor contacts</h5>
 <p>
-    In order to retrieve all debtor contacts assigned to a client account the getDebtorContacts() method needs to be
-    invoked via the VelotradePublicAPI.
+    In order to retrieve all debtor contacts assigned to your account, you need to call the method getDebtorContacts().
 </p>
 <pre>
 <code class="java">
@@ -341,8 +340,7 @@
 
 <h5>Get single debtor contact</h5>
 <p>
-    A DebtorContact entity contains all the contact information on your buyer contact. By passing the debtor contact id to the method
-    getDebtorContact(id) you can retrieve all the information required for a selected debtor without querying all of them.
+    To retrieve a single debtor contact, you need to pass the debtor contact id to the getDebtorContact() method.
 </p>
 <pre>
     <code class="java">
@@ -359,8 +357,8 @@
 
         VelotradePublicAPI api = new VelotradePublicAPIImpl(baseURL, username, password);
 
-        String debtorId = "oa1a6a170-d3d4-428a-835f-35ab021d410b";
-        DebtorContact debtorContact = api.getDebtorContact(debtorId);
+        String debtorContactId = "oa1a6a170-d3d4-428a-835f-35ab021d410b";
+        DebtorContact debtorContact = api.getDebtorContact(debtorContactId);
         Debtor debtor = debtorContact.getDebtor();
 
         System.out.println(debtor.getTradingName() + " " + debtorContact.getEmail());
@@ -377,7 +375,7 @@
 
 <h5>Upload Attachment</h5>
 <p>
-    Files can be easily uploaded using the uploadAttachment() method that takes the file path as parameter. An attachment object is returned when the upload is successful.
+    Files can easily be uploaded using the uploadAttachment() method that takes the file path as parameter. An attachment object is returned when the upload is successful.
 </p>
 <pre>
     <code class="java">
@@ -404,9 +402,9 @@
 
 <h5>Create Auction</h5>
 <p>
-    In order to create an auction, we need to retrieve the DebtorContact via the getDebtorContact(id) method,
-    create an Invoice object and create three attachments (Invoice Document, Transporation Document, Purchase Order).
-    All the objects need to be passed. If successful the method createAuction(...) will return an auction id that can be used to query the auction.
+    In order to create an auction, we need to retrieve the DebtorContact via the getDebtorContact() method,
+    create an Invoice object, and create three attachments (Invoice Document, Transporation Document, Purchase Order).
+    All the objects need to be passed tot the createAuction() method. If successful the method will return an auction id that can be used to query the auction.
 </p>
 <pre>
     <code class="java">
@@ -417,10 +415,9 @@
 
     public static void main(String[] args) throws Exception {
 
-        String baseUrl = "https://devapi.velotrade.com";
-
-        String username = "robin.walser+sel1@me.com";
-        String password = "LBlN/DMcGA/NnI7WQot3qg==";
+        String baseURL  = "https://devapi.velotrade.com";
+        String username = "username";
+        String password = "password";
 
         VelotradePublicAPI api = new VelotradePublicAPIImpl(baseUrl, username, password);
 
@@ -456,7 +453,7 @@
 <p>
     We can retrieve the auction status by invoking the method getAuctionStatus(auctionId).
     <br>
-    The following statuses will be returned (String):
+    The following statuses will be returned as a string:
 
 </p>
 <table>
@@ -498,10 +495,9 @@
 
     public static void main(String[] args) throws Exception {
 
-        String baseUrl = "https://devapi.velotrade.com";
-
-        String username = "robin.walser+sel1@me.com";
-        String password = "LBlN/DMcGA/NnI7WQot3qg==";
+        String baseURL  = "https://devapi.velotrade.com";
+        String username = "username";
+        String password = "password";
 
         VelotradePublicAPI api = new VelotradePublicAPIImpl(baseUrl, username, password);
 
@@ -609,10 +605,9 @@
 
     public static void main(String[] args) throws Exception {
 
-        String baseUrl = "https://devapi.velotrade.com";
-
-        String username = "robin.walser+sel1@me.com";
-        String password = "LBlN/DMcGA/NnI7WQot3qg==";
+        String baseURL  = "https://devapi.velotrade.com";
+        String username = "username";
+        String password = "password";
 
         VelotradePublicAPI api = new VelotradePublicAPIImpl(baseUrl, username, password);
 
@@ -638,10 +633,9 @@
 
     public static void main(String[] args) throws Exception {
 
-        String baseUrl = "https://devapi.velotrade.com";
-
-        String username = "robin.walser+sel1@me.com";
-        String password = "LBlN/DMcGA/NnI7WQot3qg==";
+        String baseURL  = "https://devapi.velotrade.com";
+        String username = "username";
+        String password = "password";
 
         VelotradePublicAPI api = new VelotradePublicAPIImpl(baseUrl, username, password);
 
@@ -666,10 +660,9 @@
 
     public static void main(String[] args) throws Exception {
 
-        String baseUrl = "https://devapi.velotrade.com";
-
-        String username = "robin.walser+sel1@me.com";
-        String password = "LBlN/DMcGA/NnI7WQot3qg==";
+        String baseURL  = "https://devapi.velotrade.com";
+        String username = "username";
+        String password = "password";
 
         VelotradePublicAPI api = new VelotradePublicAPIImpl(baseUrl, username, password);
 
