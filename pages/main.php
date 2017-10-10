@@ -12,8 +12,6 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <script type="text/javascript" src="js/main.js"></script>
     <link rel="stylesheet" href="css/default.css">
-    <script src="js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 <? require_once('header.php'); ?>

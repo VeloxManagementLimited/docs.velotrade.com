@@ -350,7 +350,7 @@
     In order to retrieve all Debtor Contacts assigned to your account, you need to call the method getDebtorContacts().
 </p>
 <pre>
-<code class="java">
+<code>
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
     import com.velotrade.sdk.entity.*;
@@ -378,7 +378,7 @@
     To retrieve a single Debtor Contact, you need to pass the Debtor Contact id to the getDebtorContact() method.
 </p>
 <pre>
-    <code class="java">
+    <code>
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
     import com.velotrade.sdk.entity.*;
@@ -410,7 +410,7 @@
     Files can easily be uploaded using the uploadAttachment() method that takes the file path as parameter. An attachment object is returned when the upload is successful.
 </p>
 <pre>
-    <code class="java">
+    <code>
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
     import com.velotrade.sdk.entity.*;
@@ -436,7 +436,7 @@
     All the objects need to be passed tot the createAuction() method. If successful the method will return an auction id that can be used to query the auction.
 </p>
 <pre>
-    <code class="java">
+    <code>
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
     import com.velotrade.sdk.entity.*;
@@ -481,6 +481,7 @@
 <p>
     We can retrieve the auction status by invoking the method getAuctionStatus(auctionId).
     <br>
+    <br>
     The following statuses will be returned as a string:
 
 </p>
@@ -515,7 +516,7 @@
     </tbody>
 </table>
 <pre>
-    <code class="java">
+    <code>
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
 
@@ -623,7 +624,7 @@
     </tbody>
 </table>
 <pre>
-    <code class="java">
+    <code>
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
 
@@ -649,7 +650,7 @@
     An auction that is in the phase SELLER_TO_APPROVE can be advanced to the next stage by approving the auction.
 </p>
 <pre>
-    <code class="java">
+    <code>
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
 
@@ -674,7 +675,7 @@
     An auction that is in the phase SELLER_TO_APPROVE can be rejected.
 </p>
 <pre>
-    <code class="java">
+    <code>
     import com.velotrade.sdk.api.VelotradePublicAPI;
     import com.velotrade.sdk.api.VelotradePublicAPIImpl;
 
